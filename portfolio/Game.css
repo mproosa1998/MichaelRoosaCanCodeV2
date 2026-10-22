@@ -1,0 +1,46 @@
+.game-page { width: min(920px, calc(100% - 64px)); min-height: calc(100vh - 168px); margin: 0 auto; padding: 52px 0 72px; }
+.game-intro { margin-bottom: 30px; text-align: center; }
+.game-intro .eyebrow span { color: var(--coral); }
+.game-intro h1 { margin: 0; font-size: clamp(40px, 6vw, 62px); line-height: 1.1; letter-spacing: -.05em; }
+.game-intro h1 span { color: var(--green); }
+.game-intro > p:last-child { max-width: 460px; margin: 12px auto 0; color: var(--muted); font-size: 14px; }
+.game-shell { padding: 22px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); box-shadow: var(--shadow); }
+.GameHeader { margin-bottom: 15px; }
+.Season { margin: 0 0 10px; color: var(--green); font-size: 20px; font-weight: 800; text-align: center; }
+.game-status-row, .game-score-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.GameStatus, .GameScore, .RoundTimer { margin: 0; color: var(--muted); font-size: 12px; }
+.GameStatus { min-height: 20px; }
+.RoundTimer { color: var(--ink); font-family: 'DM Mono', monospace; font-weight: 500; white-space: nowrap; }
+.GameControls { display: flex; gap: 8px; }
+.GameControls button { min-height: 38px; padding: 0 14px; border: 1px solid var(--green); border-radius: 3px; background: var(--green); color: #fffefa; font-size: 12px; font-weight: 800; cursor: pointer; }
+.GameControls button:hover { background: var(--green-deep); }
+body.dark-mode .GameControls button { color: #18241f; }
+.GameControls button:focus-visible, .RabbitButton:focus-visible, .DuckButton:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+.GameControls button[hidden] { display: none; }
+.Gameboard { position: relative; width: 100%; height: clamp(300px, 48vw, 450px); overflow: hidden; border: 10px solid #8b6946; border-radius: 2px; background-color: #b4cba3; background-image: radial-gradient(ellipse at 16% 78%, rgba(239, 231, 186, .75) 0 2px, transparent 3px), radial-gradient(ellipse at 73% 20%, rgba(255, 255, 255, .35) 0 1px, transparent 2px), linear-gradient(150deg, #c8d8b5 0%, #91b48a 100%); background-size: 54px 52px, 37px 33px, auto; }
+.Rabbit, .Duck { position: static; z-index: 1; }
+.RabbitButton, .DuckButton { position: absolute; top: 0; left: 0; padding: 0; border: 0; background: transparent; cursor: pointer; transition: opacity .2s ease, transform .2s ease; }
+.RabbitButton:hover, .DuckButton:hover { transform: scale(1.08); background: transparent; }
+.RabbitPic { display: block; width: clamp(52px, 9vw, 82px); height: auto; }
+.DuckPic { display: block; width: clamp(58px, 10vw, 92px); height: auto; }
+.is-hidden { opacity: 0; pointer-events: none; transform: scale(.7); }
+.board-hint { position: absolute; right: 14px; bottom: 10px; color: rgba(35, 63, 43, .72); font-family: 'DM Mono', monospace; font-size: 10px; pointer-events: none; }
+.game-rules { display: flex; justify-content: space-between; gap: 16px; padding: 16px 2px 0; color: var(--muted); font-family: 'DM Mono', monospace; font-size: 10px; }
+.game-rules span { display: flex; gap: 8px; }
+.game-rules b { color: var(--ink); font-family: 'Manrope', 'Trebuchet MS', sans-serif; font-size: 11px; }
+.site-footer { border-top: 1px solid var(--line); }
+@media (max-width: 680px) {
+    .game-page { width: calc(100% - 32px); padding: 39px 0 54px; }
+    .game-shell { padding: 14px; }
+    .game-intro { margin-bottom: 24px; }
+    .game-intro > p:last-child { font-size: 13px; }
+    .Gameboard { height: clamp(280px, 88vw, 390px); border-width: 7px; }
+    .game-rules { flex-direction: column; gap: 7px; }
+    .game-score-row { align-items: flex-start; }
+    .GameScore { padding-top: 10px; }
+}
+@media (max-width: 390px) {
+    .game-status-row { align-items: flex-start; }
+    .GameStatus { max-width: 230px; }
+    .GameControls button { padding: 0 10px; }
+}
