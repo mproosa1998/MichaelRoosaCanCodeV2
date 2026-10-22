@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>
+            Michael Roosa Can Code V2
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="Portfolio.css">
+        <link rel="icon" href="../images/octocat.png">
+        <script src="Portfolio.js" defer></script>
+    </head> 
+
+    <body>
+    
+        <!--NAVBAR-->
+        <div class="navbar">
+            <a class="active" href="#Home">HOME</a>
+            <a href="Game.html">LooneyGame</a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">CONTACT</a>
+            
+            
+            <!--Dark/Light Mode Toggle-->
+            <button
+                id="themeToggle"
+                class="theme-toggle"
+                type="button"
+                aria-label="Switch to light mode"
+                onclick="toggleTheme()">
+                ☀
+            </button>
+
+            
+        </div>
+
+        <div id="Home">
+            <div id="MatrixBox">
+                <!--Matrix Quote-->
+                <div class="ProfileSummary">
+                    <!--Background Video-->
+                    <div id="MatrixVideo">
+                        <video autoplay muted loop id="video">
+                            <source src="../video/MatrixVideo.mp4" type="video/mp4">
+                            <!--Display if video fails to run-->
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+    
+                    <p id="MatrixQuote">
+At last. Welcome, as you no doubt have guessed I am Michael Roosa.
+The honor is mine. Please, come. Scroll.
+I imagine that right now you are feeling a bit like Alice.
+Tumbling down the rabbit hole? Hmm?
+You have the look of someone who accepts what they see because they're expecting to talent.
+Ironically, this is not far from the truth. Do you believe in fate?
+Let me tell you why you're here.
+You're here because you know something.
+It is this feeling that you are going to hire me.
+Even now, in this very room. You can see it when you look out your window or when you turn on your television. You can feel it when you go to work, when you go to church, when you pay your taxes.
+Unfortunately, no one can be told who to hire. 
+You have to see it for yourself. This is your last chance.
+After this, there is no turning back. You click the '<button type="button" id="matrixXBtn" class="inlineBtn" onclick="closeTab()">X</button>', the story ends, you wake up in your bed and believe whatever you want to believe.
+You click the '<button type="button" id="matrixContactBtn" class="inlineBtn" onclick="openForm()" ondblclick="closeForm()">CONTACT</button>' button, you stay in Wonderland, and I show you how deep the rabbit hole goes. Remember: all I'm offering is the truth. Nothing more.
+                    </p>
+                    <h6>Paraphrased quote from the Matrix 1999</h6>
+                </div>
+                
+            </div>
+    
+            <div class="container">
+                
+            </div>
+            
+        </div>
+
+
+
+        <!--Contact Section-->
+        <div id="contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <!--Left column, Contact Image-->
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/xwkyvpqq" method="post" class="form-container">
+                    <label>Name:</label>
+                        <input type="text" id="Name" name="Name" placeholder="Please enter your name here" required>
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here" required>
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here" required>
+                        
+                        <button type="submit" class="btn">SUBMIT</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="Row">
+            <div class="Column_2">
+                <img src="../images/octocat.png" alt="'github photo" class="ColumnImage">
+            </div>
+            <div class="Column_1">
+                <a href="https://github.com/mproosa1998" target="_blank"
+                rel="noopener npreferrer">GITHUB</a>
+                <p class="About_Text">
+                    Come look at some of my old projects!!<br>
+                    I have experience with:<br>
+                    Python<br>
+                    Java<br>
+                    HTML/CSS/JS<br>
+                    C/C++/C#<br>
+                    Vibe Coding
+                </p>
+            </div>
+
+        </div>
+
+        <div class="Row">
+            <div class="Column_1">
+                <p>
+                    About
+                </p>
+            </div>
+            <div class="Column_2">
+                <img src="../images/about.jpg" alt="'about me" class="ColumnImage">
+            </div>
+        </div>
+
+
+
+
+
+        <!--Footer-->
+        <footer>
+            Michael Roosa | mproosa1998@gmail.com | (413) 717-8058
+        </footer>
+        
+    </body>
+</html>
